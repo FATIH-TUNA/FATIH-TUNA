@@ -18,7 +18,6 @@ while True:
 
     predictions=model.predict(img_array)
     predicted_class=np.argmax(predictions[0])
-    # Assuming predictions[0] is an array with class probabilities or similar data
     confidence = predictions[0][predicted_class]
 
     label=label = f"{class_names[predicted_class]}: {confidence * 100:.2f}%"
