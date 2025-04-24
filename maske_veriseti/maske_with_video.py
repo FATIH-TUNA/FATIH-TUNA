@@ -20,7 +20,7 @@ while True:
     predicted_class=np.argmax(predictions[0])
     confidence = predictions[0][predicted_class]
 
-    label=label = f"{class_names[predicted_class]}: {confidence * 100:.2f}%"
+    label = f"{class_names[predicted_class]}: {confidence * 100:.2f}%"
 
     cv2.putText(camera, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
     cv2.imshow("KAMERA",camera);
